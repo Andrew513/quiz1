@@ -3,17 +3,23 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>My Document</title>
     <script type="text/javascript">
-    function change() { 
-            var header = document.getElementById("quiz1"); 
-            header.innerHTML = "CSIE@CGU"; 
-            var para = document.getElementById("quiz1_1"); 
-            para.innerHTML = "怎麼那麼棒！！"; 
+    function change() {
+            var header = document.getElementById("quiz1");
+            header.innerHTML = "CSIE@CGU";
+            var para = document.getElementById("quiz1_1");
+            para.innerHTML = "怎麼那麼棒！！";
             }
-            </script>
+    function myFunction() {  
+        var btn = document.createElement("BUTTON");  
+        btn.innerHTML = "Change this document";
+        document.body.appendChild(btn).addEventListener("click", change);
+    }
+    </script>
 </head>
 
-<body> 
-    <input type="button" value="Change this document." onclick="change()">
+<body>
+    <button onclick="myFunction()">Try it</button>
+    <!-- <input type="button" value="Change this document." onclick="change()"> -->
     <h1 id = "quiz1"> CGU</h1>
     <p id ="quiz1_1">好棒棒</p>
 </body>
